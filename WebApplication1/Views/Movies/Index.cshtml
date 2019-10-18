@@ -8,6 +8,14 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
+    @using (Html.BeginForm("Index", "Movies", FormMethod.Get))
+    {
+        <p> 
+            Pesquisa Por Genero: @Html.DropDownList("movieGenre", "All")
+            Pesquisa Por Titulo: @Html.TextBox("SearchString")
+            <input type="submit" value="Filter" />
+        </p>
+    }
 </p>
 <table class="table">
     <tr>
