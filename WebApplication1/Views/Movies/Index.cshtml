@@ -8,14 +8,6 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
-    @using (Html.BeginForm("Index", "Movies", FormMethod.Get))
-    {
-        <p> 
-            Pesquisa Por Genero: @Html.DropDownList("movieGenre", "All")
-            Pesquisa Por Titulo: @Html.TextBox("SearchString")
-            <input type="submit" value="Filter" />
-        </p>
-    }
 </p>
 <table class="table">
     <tr>
@@ -30,6 +22,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
         </th>
         <th></th>
     </tr>
@@ -47,6 +42,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
