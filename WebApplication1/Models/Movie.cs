@@ -4,6 +4,11 @@ using System.Data.Entity;
 
 namespace WebApplication1.Models
 {
+   /* public class MovieDBContext : DbContext
+    {
+        public DbSet<Movie> Movies { get; set; }
+    }*/
+
     public class Movie
     {
         public int ID { get; set; }
