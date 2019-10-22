@@ -23,7 +23,7 @@ namespace WebApplication1.Controllers
                            orderby d.Genre
                            select d.Genre;
             GenreLst.AddRange(GenreQry.Distinct());
-            ViewBag.movieGenre = new SelectList(GenreLst);
+            ViewBag.movieGenre = new SelectList(GenreLst, "Comédia"); //Parâmetro "Comédia" Traz esse filtro como padrão de Genêro
 
             var movies = from m in db.Movies
                          select m;
